@@ -1,0 +1,14 @@
+package generated;
+
+import java.io.InputStream;
+
+public final class GeneratedParser {
+    private GeneratedLexer lex;
+
+    public GeneratedParser(InputStream inputStream) {
+        lex = new GeneratedLexer(inputStream);
+        lex.nextToken();
+    }
+
+%%INSERT_RULES%%
+}
